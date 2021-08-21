@@ -5,7 +5,13 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  <?php 
+    require_once('inc/functions.php');
+    $users = getAllUsers();
+    session_start();
+    foreach($users as $user):
+    if($user['username'] === $_SESSION['admin']):
+  ?>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
@@ -20,11 +26,13 @@
       <li class="nav-item active">
         <a class="nav-link" href="?page=movie"><i class="fa fa-film" aria-hidden="true"> Movie Entertainment</i><span class="sr-only">(current)</span></a>
       </li>
-  
+      <?php 
+        if($user['role'] === 'admin'):
+      ?>
       <li class="nav-item active">
         <a class="nav-link" href="?page=usermanager"><i class="fa fa-user" aria-hidden="true"></i> Admin</i><span class="sr-only">(current)</span></a>
       </li>
-
+      <?php endif; ?>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <div class="d-flex justify-content-end p-2">
@@ -32,5 +40,6 @@
       </div>
     </form>
   </div>
-
+<?php endif; ?>
+<?php endforeach; ?>
 </nav>
