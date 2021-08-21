@@ -26,7 +26,7 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <div class="d-flex justify-content-end p-2">
-          <a href="create_html.php" class="btn btn-danger">Sign In</a>
+          <a href="log/sign_in.php" class="btn btn-danger">Sign In</a>
       </div>
     </form>
   </div>
