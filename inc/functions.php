@@ -101,13 +101,13 @@
         $username = $value['username'];
         $password = $value['password'];
         $email = $value['email'];
-        $profile = $_FILES['profile']['name'];
+        $profile = $_FILES['file']['name'];
         $role = $value['role'];
-        $tmp_name = $_FILES['profile']['tmp_name'];
+        $tmp_name = $_FILES['file']['tmp_name'];
         $passwordEncrypt = password_hash($password, PASSWORD_DEFAULT);
         $dir = "../assets/images/";
         move_uploaded_file($tmp_name, $dir.$profile);
-        return db()->query("INSERT INTO users(username, password, email, profile, role) VALUES('$username', '$password', '$email', '$profile', '$role') ");
+        return db()->query("INSERT INTO users(username, password, email, profile, role) VALUES('$username', '$passwordEncrypt', '$email', '$profile', '$role') ");
     }
 
     function deleteFromPost($id) {
@@ -183,11 +183,9 @@
         $_SESSION['admin'] = $username;
 
         foreach($users as $user) {
-            if($user['username'] === $username and $user['password'] === $password){
+            if($user['username'] === $username and password_verify($password, $user['password']) ){
                 $isLogined = true;
             }
         }
         return $isLogined;
     }
-
-?>

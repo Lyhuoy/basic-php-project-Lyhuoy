@@ -27,7 +27,7 @@
                 } 
               ?>
 
-                <form action="" method="POST">
+                <form action="" method="post">
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>

@@ -37,7 +37,7 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-image fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="file" id="form3Example4cd" class="form-control"  name="profile" require/>
+                      <input type="file" id="form3Example4cd" class="form-control"  name="file" require/>
                       <label class="form-label" for="form3Example4cd">Profile</label>
                     </div>
                   </div>
@@ -47,8 +47,8 @@
                     <div class="form-outline flex-fill mb-0">
                         <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example" name="role" require>
                             <option selected>Chose Role</option>
-                            <option value="Admin">Admin</option>
-                            <option value="User">User</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
                         </select>
                       <label class="form-label" for="form3Example4c">Role</label>
                     </div>
