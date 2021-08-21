@@ -45,6 +45,7 @@
         <a href="process/create_html.php" class="btn btn-primary">CLICK HERE</a>
     </div>
 </div>
+<h5 class="ml-3">Post Table</h5>
     <div class="card-body mt-3 mb-3 ml-3 mr-3">
         <table class="table table-hover">
         <!--Table head-->
@@ -73,7 +74,7 @@
                 <td><?= $post['category_id'] ?></td>
                 <td><?= $post['user_id'] ?></td>
                 <td><?= $post['title'] ?></td>
-                <td><?= $post['description'] ?></td>
+                <td><?=substr ($post['description'], 0, 150) ?></td>
                 <td><div class="d-flex align-items-center"><img class="rounded" src="assets/images/<?= $post['image'] ?>" width="45" height="33"></td>
                 <td><?= $post['date'] ?></td>
                 <td>
@@ -98,6 +99,7 @@
         <a href="process/create_cate_html.php" class="btn btn-primary">CLICK HERE</a>
     </div>
 </div>
+<h5 class="ml-3">Category Table</h5>
 <div class="mt-3 mb-3 ml-3 mr-3">
     <table class="table table-hover">
         <thead>
@@ -136,6 +138,7 @@
         <a href="process/create_user.php" class="btn btn-primary">CLICK HERE</a>
     </div>
 </div>
+<h5 class="ml-3">User Table</h5>
 <div class="mt-3 mb-3 ml-3 mr-3">
 <table class="table w-auto table table-hover">
 
@@ -164,7 +167,7 @@
         <td><?= $user['username'] ?></td>
         <td><?= $user['password'] ?></td>
         <td><?= $user['email'] ?></td>
-        <td><div class="d-flex align-items-center"><img class="rounded-circle" src="assets/images/<?= $user['profile'] ?>" width="45" height="33"></div></td>
+        <td><div class="d-flex align-items-center"><img class="rounded" src="assets/images/<?= $user['profile'] ?>" width="40" height="28"></div></td>
         <td><?= $user['role'] ?></td>
         <?php
             if($user['role'] != 'admin'):
@@ -173,7 +176,8 @@
             <a href="process/edit_user.php?user_id=<?= $user['user_id'] ?>"><i class="fa fa-pencil-square-o mr-2" aria-hidden="true"></i></a>
             <a href="process/delete_user.php?user_id=<?= $user['user_id'] ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
         </td>
-
+        <?php elseif($user['role'] === 'admin'): ?>
+        <td><i class="fa fa-users" aria-hidden="true"></i></td>
         <?php endif; ?>          
         </tr>
     </tbody>

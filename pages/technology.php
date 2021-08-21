@@ -18,7 +18,7 @@
 <!-- End search and Sort -->
 
 <!-- Start page detail -->
-<div class="row row-cols-1 row-cols-md-3 g-4 mt-3 ml-3 mr-3 justify-content-center">
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 ml-3 mr-3 justify-content-center">
   <?php
     require_once('inc/functions.php');
     $techs = get2LastestTech();
@@ -33,20 +33,21 @@
       />
       <div class="card-body">
         <h5 class="card-title"><?= $tech['title'] ?></h5>
-        <!-- <p class="card-text">
-        <?= $tech['description'] ?>
-        </p> -->
+        <p class="card-text">
+        <?=substr ($tech['description'],0,80) ?> ...
+        </p>
         <p class="card-text"><small class="text-muted"><?= $tech['date'] ?></small></p>
+        <a href="?page=tech_detail&tech_id=<?= $tech['post_id'] ?>" class="btn btn-info text-white">Read More</a>
       </div>
-      <a href="?page=tech_detail&tech_id=<?= $tech['post_id'] ?>" class="btn btn-info text-white">Go Detail</a>
+
     </div>
   </div>
   <?php endforeach; ?>
-</div>
+</div> -->
 <!-- End start page -->
 </div>
 <!-- Start Detail info -->
-<hr class="mt-5 mb-3 ml-3 mr-3">
+<!-- <hr class="mt-5 mb-3 ml-3 mr-3"> -->
 <div class="container mt-3 mb-3 justify-content-start">
       <div class="row">
         <div class="col-md-12 offset-2">
@@ -72,9 +73,9 @@
                   </div>
                   <div class="_shareIcons align-self-end">
                     <ul class="list-unstyled m-0 d-inline-flex">
-                      <li class="ml-1 mr-1"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                      <li class="ml-1 mr-1"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></i></a></li>
-                      <li class="ml-1 mr-1"><a href="#"><i class="fa fa-share" aria-hidden="true"></i></a></li>
+                      <li class="ml-1 mr-1"><i class="fa fa-eye" aria-hidden="true"></i></li>
+                      <li class="ml-1 mr-1"><i class="fa fa-heart" aria-hidden="true"></i></li>
+                      <li class="ml-1 mr-1"><i class="fa fa-share" aria-hidden="true"></i></li>
                     </ul>
                 </div>
                 </div>

@@ -104,6 +104,7 @@
         $profile = $_FILES['profile']['name'];
         $role = $value['role'];
         $tmp_name = $_FILES['profile']['tmp_name'];
+        $passwordEncrypt = password_hash($password, PASSWORD_DEFAULT);
         $dir = "../assets/images/";
         move_uploaded_file($tmp_name, $dir.$profile);
         return db()->query("INSERT INTO users(username, password, email, profile, role) VALUES('$username', '$password', '$email', '$profile', '$role') ");
@@ -129,7 +130,7 @@
         $username = $value['username'];
         $password = $value['password'];
         $email = $value['email'];
-        $profile = $_FILES['profile']['name'];
+        $profile = $_FILES['file']['name'];
         $role = $value['role'];
         $tmp_name = $_FILES['profile']['tmp_name'];
         $dir = "../assets/images/";
@@ -171,3 +172,22 @@
     function sortByName() {
         return db()->query("SELECT * FROM posts WHERE category_id = 1 ORDER BY catgory_id ASC");
     }
+
+
+    function userLogin($value) {
+        $username = $value['username'];
+        $password = $value['password'];
+        $isLogined = false;
+        $users = db()->query("SELECT * FROM users");
+        session_start();
+        $_SESSION['admin'] = $username;
+
+        foreach($users as $user) {
+            if($user['username'] === $username and $user['password'] === $password){
+                $isLogined = true;
+            }
+        }
+        return $isLogined;
+    }
+
+?>

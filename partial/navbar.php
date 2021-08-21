@@ -20,14 +20,17 @@
       <li class="nav-item active">
         <a class="nav-link" href="?page=movie"><i class="fa fa-film" aria-hidden="true"> Movie Entertainment</i><span class="sr-only">(current)</span></a>
       </li>
+  
       <li class="nav-item active">
         <a class="nav-link" href="?page=usermanager"><i class="fa fa-user" aria-hidden="true"></i> Admin</i><span class="sr-only">(current)</span></a>
       </li>
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <div class="d-flex justify-content-end p-2">
-          <a href="log/sign_in.php" class="btn btn-danger">Sign In</a>
+          <a href="log/sign_in.php" class="btn btn-danger">Login</a>
       </div>
     </form>
   </div>
+
 </nav>

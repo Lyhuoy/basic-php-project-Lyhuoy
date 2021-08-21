@@ -47,7 +47,8 @@
                     <div class="form-outline flex-fill mb-0">
                         <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example" name="role" require>
                             <option selected>Chose Role</option>
-                            <option value="admin">Admin</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User">User</option>
                         </select>
                       <label class="form-label" for="form3Example4c">Role</label>
                     </div>
@@ -60,7 +61,6 @@
                 </form>
                 
                 <div class="d-flex justify-content-around mx-4 mb-3 mb-lg-4">
-                    <h3>Or</h3>
                     <a href="http://localhost/basic-php-project-Lyhuoy/index.php?page=usermanager"><button type="button" class="btn btn-primary btn-lg mr-2">Back to Admin</button></a>
                 </div>
               </div>

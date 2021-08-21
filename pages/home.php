@@ -4,7 +4,7 @@
 
 <!-- Start lastest news -->
 <button type="button" class="btn btn-danger btn-lg text-uppercase mt-3 ml-3 mr-3">Lastest news</button>
-<div class="row row-cols-1 row-cols-md-3 g-4 mt-0 ml-3 mr-3">
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-0 ml-3 mr-3 mb-3">
   <?php
     require_once('inc/functions.php');
     $sports = getLastestSport();
@@ -21,7 +21,7 @@
       <div class="card-body">
         <h5 class="card-title"><?= $sport['title'] ?></h5>
         <p class="card-text">
-        <!-- <?= $sport['description'] ?> -->
+        <?=substr ($sport['description'],0,80) ?> ...
         </p>
         <p class="card-text"><small class="text-muted"><?= $sport['date'] ?></small></p>
         <a href="?page=sport_detail&sport_id=<?= $sport['post_id'] ?>" class="btn btn-info text-white">Read more</a>
@@ -46,7 +46,7 @@
       <div class="card-body">
         <h5 class="card-title"><?= $tech['title'] ?></h5>
         <p class="card-text">
-        <!-- <?= $tech['description'] ?> -->
+        <?=substr ($tech['description'],0,80) ?> ...
         </p>
         <p class="card-text"><small class="text-muted"><?= $tech['date'] ?></small></p>
         <a href="?page=tech_detail&tech_id=<?= $tech['post_id'] ?>" class="btn btn-info text-white">Read more</a>
@@ -71,7 +71,7 @@
       <div class="card-body">
         <h5 class="card-title"><?= $movie['title'] ?></h5>
         <p class="card-text">
-        <!-- <?= $movie['description'] ?> -->
+        <?=substr ($movie['description'],0,80) ?> ...
         </p>
         <p class="card-text"><small class="text-muted"><?= $movie['date'] ?></small></p>
         <a href="?page=movie_detail&movie_id=<?= $movie['post_id'] ?>" class="btn btn-info text-white">Read more</a>
@@ -100,7 +100,7 @@
       <div class="card-body">
         <h5 class="card-title"><?= $sport['title'] ?></h5>
         <p class="card-text">
-        <!-- <?= $sport['description'] ?> -->
+        <?=substr ($sport['description'],0,80) ?> ...
         </p>
         <p class="card-text"><small class="text-muted"><?= $sport['date'] ?></small></p>
         <a href="?page=sport_detail&sport_id=<?= $sport['post_id'] ?>" class="btn btn-info text-white">Read more</a>
@@ -129,7 +129,7 @@
       <div class="card-body">
         <h5 class="card-title"><?= $tech['title'] ?></h5>
         <p class="card-text">
-        <!-- <?= $tech['description'] ?> -->
+        <?=substr ($tech['description'],0,80) ?> ...
         </p>
         <p class="card-text"><small class="text-muted"><?= $tech['date'] ?></small></p>
         <a href="?page=tech_detail&tech_id=<?= $tech['post_id'] ?>" class="btn btn-info text-white">Read more</a>
@@ -158,7 +158,7 @@
       <div class="card-body">
         <h5 class="card-title"><?= $movie['title'] ?></h5>
         <p class="card-text">
-        <!-- <?= $movie['description'] ?> -->
+        <?=substr ($movie['description'],0,80) ?> ...
         </p>
         <p class="card-text"><small class="text-muted"><?= $movie['date'] ?></small></p>
         <a href="?page=movie_detail&movie_id=<?= $movie['post_id'] ?>" class="btn btn-info text-white">Read more</a>

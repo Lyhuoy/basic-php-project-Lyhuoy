@@ -65,9 +65,9 @@
                   </div>
                   <div class="_shareIcons align-self-end">
                     <ul class="list-unstyled m-0 d-inline-flex">
-                      <li class="ml-1 mr-1"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                      <li class="ml-1 mr-1"><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></i></a></li>
-                      <li class="ml-1 mr-1"><a href="#"><i class="fa fa-share" aria-hidden="true"></i></a></li>
+                      <li class="ml-1 mr-1"><i class="fa fa-eye" aria-hidden="true"></i></li>
+                      <li class="ml-1 mr-1"><i class="fa fa-heart" aria-hidden="true"></i></li>
+                      <li class="ml-1 mr-1"><i class="fa fa-share" aria-hidden="true"></i></li>
                     </ul>
                 </div>
                 </div>

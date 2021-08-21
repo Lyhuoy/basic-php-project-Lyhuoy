@@ -8,7 +8,7 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form>
+              <form action="../process/create_user_model.php" method="post" enctype="multipart/form-data">
 
                 <div class="form-outline mb-4">
                   <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="username" require/>
@@ -38,7 +38,7 @@
                     <label class="form-label" for="form3Example4cdg">Role</label>
                 </div>
                 <div class="d-flex justify-content-center mb-4">
-                  <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                  <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                 </div>
 
                 <div class="mb-4">

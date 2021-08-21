@@ -54,6 +54,7 @@
                         <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example" name="role" require>
                             <option selected>Chose Role</option>
                             <option value="admin">Admin</option>
+                            <option value="user">User</option>
                         </select>
                       <label class="form-label" for="form3Example4c">Role</label>
                     </div>
